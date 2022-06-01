@@ -1,0 +1,16 @@
+.Header {
+  @apply py-5;
+  box-shadow: -2px 1px 15px 0px #a9a7a7;
+
+  &__logo {
+    font-size: 32px;
+  }
+
+  &__container {
+    @apply container;
+    @apply mx-auto;
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+  }
+}

@@ -1,0 +1,14 @@
+.Footer {
+  @apply bg-primary;
+  @apply py-5;
+  @apply w-full;
+
+  &__container {
+    @apply container;
+    @apply mx-auto;
+
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+  }
+}
