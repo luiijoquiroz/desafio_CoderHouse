@@ -1,0 +1,28 @@
+// .MainMenu {
+//   @apply bg-secondary;
+//   @apply p-4;
+//   @apply rounded-full;
+
+//   &__link {
+//     @apply ml-8;
+
+//     &:first-child {
+//       @apply ml-0;
+//     }
+//   }
+// }
+
+.MainMenu {
+  color: #fff;
+  background: blue;
+  padding: 20px;
+  border-radius: 10px;
+
+  &__link {
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
