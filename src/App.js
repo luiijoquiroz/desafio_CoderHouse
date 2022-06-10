@@ -21,4 +21,6 @@ export const App = () => {
   );
 };
 
-// git rm -r --cached .
+// git rm -r --cached .gs
+
+// git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch src/assets/videos/BJJ.mp4'
