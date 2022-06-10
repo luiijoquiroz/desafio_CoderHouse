@@ -24,3 +24,5 @@ export const App = () => {
 // git rm -r --cached .gs
 
 // git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch src/assets/videos/BJJ.mp4'
+
+// git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch public/videos/Demo.mp4'
