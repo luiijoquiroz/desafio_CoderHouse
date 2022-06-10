@@ -20,3 +20,5 @@ export const App = () => {
     </div>
   );
 };
+
+// git rm -r --cached .
