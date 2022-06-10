@@ -4,6 +4,7 @@ import twitter from "../../assets/img/twitter.png";
 import instagram from "../../assets/img/instagram.png";
 
 function Footer() {
+  console.log("Aqui")
   return (
     <footer className="footer">
       <div>
