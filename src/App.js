@@ -4,6 +4,7 @@ import { Main, Footer, Banner } from "./components";
 import { routes } from "./routes";
 
 // En desarrollo
+// Todo: habilitar uso de rutas
 export const App = () => {
   return (
     <div className="App">
