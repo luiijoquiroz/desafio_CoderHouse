@@ -16,7 +16,7 @@ export const App = () => {
           ))}
         </Routes>
       </Main>*/}
-<Footer /> 
+      <Footer />
     </div>
   );
 };
