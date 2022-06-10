@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Main, Footer, Banner } from "./components";
 import { routes } from "./routes";
 
+// En desarrollo
 export const App = () => {
   return (
     <div className="App">
