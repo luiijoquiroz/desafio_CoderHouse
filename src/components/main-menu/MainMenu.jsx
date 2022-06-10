@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 import "./MainMenu.scss";
 
-function MainMenu(props) {
-  const { itemsMenu = [] } = props;
+function MainMenu({ itemsMenu }) {
 
   return (
-    <nav className="MainMenu">
-      {itemsMenu.map((item, id) => (
-        <Link key={id} className="MainMenu__link" to={item.url}>
-          {item.text}
-        </Link>
-      ))}
-    </nav>
+    <div className="menu">
+      <ul className="ul">
+        {itemsMenu.map((item) => (
+          <li  key={item.text} className="li">
+            <Link key={item.text} className="a" to={item.url}>
+              {item.text}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

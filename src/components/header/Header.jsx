@@ -1,34 +1,15 @@
 import { Link } from "react-router-dom";
+import { Toggle } from '../../ui/index';
 import "./Header.scss";
 
-import { MainMenu } from "../";
-function Header() {
-  const itemsMenu = [
-    {
-      text: "Home",
-      url: "/",
-    },
-    {
-      text: "Quienes somos",
-      url: "/quienes-somos",
-    },
-    {
-      text: "Nosotros",
-      url: "/nosotros",
-    },
-    {
-      text: "Servicios",
-      url: "/servicios",
-    },
-  ];
+
+function Header({setBannerState}) {
   return (
-    <header className="Header w-full bg-primary">
-      <div className="Header__container">
-        <Link to="/" className="Header__logo">
-          Ecomerce comprame algo
-        </Link>
-        <MainMenu itemsMenu={itemsMenu} />
-      </div>
+    <header>
+      <Link to="/" >
+        <h2 className="logo">Mi logo</h2>
+      </Link>
+      <Toggle setBannerState={setBannerState}  />
     </header>
   );
 }

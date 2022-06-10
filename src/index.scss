@@ -1,13 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
 
-.App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 
-  main {
-    flex-grow: 1;
+}
+
+@media (max-width:991px) {
+
+  section,
+  section header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  text h3 {
+    font-size: 2em;
+    ;
   }
 }
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
