@@ -9,7 +9,7 @@
    cursor: pointer;
 }
 
-.toggle .active {
+.toggle.active {
    background: url("../../assets/img/close.png");
    background-repeat: no-repeat;
    background-size: 25px;

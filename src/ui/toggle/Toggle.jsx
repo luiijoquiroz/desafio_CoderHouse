@@ -2,20 +2,20 @@
 import './Toggle.css'
 import { useState } from 'react'
 
-const Toggle = ({setBannerState}) => {
+const Toggle = ( {setState} ) => {
    const [toggleState, setToggleState] = useState('toggle')
    
    const handleToggle = (e) => {
-      
+      e.preventDefault();
       if (e.target.className === 'toggle') {
-         setToggleState('toggle active')
-         setBannerState('banner active') 
+         setState('active')
+         setToggleState(toggleState + ' active')  
       } else {
-         setBannerState('banner') 
-         setToggleState('toggle')   
-         }
-      
+         setToggleState('toggle')  
+         setState('')
+      }
    }
+   
    
    return (
       <div className={toggleState} onClick={handleToggle} ></div>

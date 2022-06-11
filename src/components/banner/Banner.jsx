@@ -2,43 +2,33 @@ import { Header } from '../index';
 import { MainMenu } from '../index';
 import { useState } from 'react'
 import video from "../../assets/videos/BJJ.mp4";
-import "./Banner.scss";
+import "./Banner.css";
+import { useEffect } from 'react';
 
+const Banner = ({ defaultBanner =  'banner'}) => {
+  const [state, setState] = useState('')
+  const [bannerState, setBannerState] = useState(defaultBanner)
 
-const itemsMenu = [
-  {
-    text: "Home",
-    url: "/",
-  },
-  {
-    text: "Disciplinas",
-    url: "/disciplinas",
-  },
-  {
-    text: "Nosotros",
-    url: "/nosotros",
-  },
-  {
-    text: "Servicios",
-    url: "/servicios",
-  }
-];
+  useEffect(() => {
+    setBannerState(defaultBanner)
+    if (state === 'active') {
+      setBannerState(`${defaultBanner} ${state}`)
+    } 
+  }, [state, defaultBanner])
 
-const Banner = () => {
-  const [bannerState, setBannerState] = useState('banner')
-  
+  console.log(`[BannerState]: ${bannerState}`)
   return (
     <>
-      <MainMenu itemsMenu={itemsMenu} />
+      <MainMenu state={state} />
       <section className={bannerState}>
-        <Header setBannerState={setBannerState} />
+        <Header setState={setState} />
         <video className='video' src={video} type='video/mp4' muted loop autoPlay ></video>
         <div className='overlay'></div>
         <div className='text'>
           <h2>Be Stronger</h2>
           <h2>Never give up</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit doloribus cumque dolorem, fugiat illum delectus? Explicabo corrupti minima repellat unde vel. Eum facere commodi rerum, eveniet amet error est magni.</p>
-          <a href="#">Join us</a>
+          <a href="/">Join us</a>
         </div>
       </section>
     </>

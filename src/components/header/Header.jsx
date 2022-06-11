@@ -3,13 +3,13 @@ import { Toggle } from '../../ui/index';
 import "./Header.scss";
 
 
-function Header({setBannerState}) {
+function Header({setState}) {
   return (
     <header>
       <Link to="/" >
-        <h2 className="logo">Mi logo</h2>
+        <h2 className="logo">MMA-Chile</h2>
       </Link>
-      <Toggle setBannerState={setBannerState}  />
+      <Toggle setState={setState}  />
     </header>
   );
 }
