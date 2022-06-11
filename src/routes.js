@@ -1,6 +1,6 @@
 import {
   PageHome,
-  PageNosotros,
+  PageDisciplinas,
   PageQuienesSomos,
   PageServicios,
 } from "./pages";
@@ -14,11 +14,11 @@ export const routes = [
     component: <PageHome />,
   },
   {
-    id: 1,
-    name: "nosotros",
-    path: "/nosotros",
+    id: 2,
+    name: "disciplinas",
+    path: "/disciplinas",
     private: false,
-    component: <PageNosotros />,
+    component: <PageDisciplinas />,
   },
   {
     id: 1,

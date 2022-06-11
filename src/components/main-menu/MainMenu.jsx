@@ -1,17 +1,46 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./MainMenu.scss";
 
-function MainMenu(props) {
-  const { itemsMenu = [] } = props;
+ const itemsMenu = [
+  {
+    text: "Home",
+    url: "/",
+  },
+  {
+    text: "Disciplinas",
+    url: "/disciplinas",
+  },
+  {
+    text: "Nosotros",
+    url: "/nosotros",
+  },
+  {
+    text: "Servicios",
+    url: "/servicios",
+  }
+];
 
+function MainMenu({ state = 'menu' }) {
+  const [menuState, setMenuState] = useState('menu')
+  
+  useEffect(() => {
+    setMenuState('menu '+state)     
+  },[state] )
+  
+  console.log("MainMenu", state)
   return (
-    <nav className="MainMenu">
-      {itemsMenu.map((item, id) => (
-        <Link key={id} className="MainMenu__link" to={item.url}>
-          {item.text}
-        </Link>
-      ))}
-    </nav>
+    <div className={menuState}>
+      <ul className="ul">
+        {itemsMenu.map((item) => (
+          <li  key={item.text} className="li">
+            <Link key={item.text} className="a" to={item.url}>
+              {item.text}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

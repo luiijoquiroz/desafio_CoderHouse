@@ -1,28 +1,40 @@
-// .MainMenu {
-//   @apply bg-secondary;
-//   @apply p-4;
-//   @apply rounded-full;
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
 
-//   &__link {
-//     @apply ml-8;
+.menu.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background: #fff;
+}
 
-//     &:first-child {
-//       @apply ml-0;
-//     }
-//   }
-// }
+.menu ul {
+  position: relative;
+}
 
-.MainMenu {
-  color: #fff;
-  background: blue;
-  padding: 20px;
-  border-radius: 10px;
+.menu ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
 
-  &__link {
-    margin-left: 10px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
 }

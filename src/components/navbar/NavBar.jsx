@@ -4,11 +4,10 @@ import "./NavBar.scss";
 
 function NavBar() {
   return (
-    <div className="NavBar">
-      <Link className="NavBar__logo" to="/">
+    <div>
+      <Link to="/">
         LOGO
       </Link>
-
       <MainMenu />
     </div>
   );
