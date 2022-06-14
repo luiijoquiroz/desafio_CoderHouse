@@ -1,37 +1,63 @@
 import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import {
   PageHome,
   PageDisciplinas,
   PageQuienesSomos,
   PageServicios,
 } from "./pages";
 
-export const routes = [
+const routes = [
   {
     id: 1,
     name: "home",
     path: "/",
     private: false,
-    component: <PageHome />,
+    exact: true,
+    element: <PageHome />,
+    // element: ()=> <h1>Hola Mundo</h1>,
   },
-  {
-    id: 2,
-    name: "disciplinas",
-    path: "/disciplinas",
-    private: false,
-    component: <PageDisciplinas />,
-  },
-  {
-    id: 1,
-    name: "quienes-somos",
-    path: "/quienes-somos",
-    private: false,
-    component: <PageQuienesSomos />,
-  },
-  {
-    id: 1,
-    name: "servicios",
-    path: "/servicios",
-    private: false,
-    component: <PageServicios />,
-  },
+//   {
+//     id: 2,
+//     name: "disciplinas",
+//     path: "/disciplinas",
+//     private: false,
+//     element: <PageDisciplinas />,
+//   },
+//   {
+//     id: 3,
+//     name: "quienes-somos",
+//     path: "/quienes-somos",
+//     private: false,
+//     element: <PageQuienesSomos />,
+//   },
+//   {
+//     id: 4,
+//     name: "servicios",
+//     path: "/servicios",
+//     private: false,
+//     element: <PageServicios />,
+//   },
 ];
+
+const AppRoutes = () => {
+  console.log(`[AppRoutes] before  routes:  ${Date()}`)
+  
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <PageHome />} />
+{/*         
+        {routes.map((route) => (
+            <Route key={route.id} path={route.path} element={route.element} />
+        ))} */}
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default AppRoutes;

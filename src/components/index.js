@@ -3,4 +3,6 @@ export * from "./navbar/NavBar";
 export * from "./footer/Footer";
 export * from "./header/Header";
 export * from "./main/Main";
+export * from "./layout/Layout";
 export * from "./banner/Banner";
+

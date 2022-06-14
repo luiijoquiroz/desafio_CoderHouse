@@ -21,14 +21,14 @@ import "./MainMenu.scss";
   }
 ];
 
-function MainMenu({ state = 'menu' }) {
+function MainMenu({state }) {
   const [menuState, setMenuState] = useState('menu')
   
   useEffect(() => {
-    setMenuState('menu '+state)     
+    setMenuState('menu '+state)
   },[state] )
   
-  console.log("MainMenu", state)
+  console.log("MainMenu", menuState)
   return (
     <div className={menuState}>
       <ul className="ul">

@@ -1,27 +1,26 @@
-import { Header } from '../index';
-import { MainMenu } from '../index';
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import video from "../../assets/videos/BJJ.mp4";
 import "./Banner.css";
-import { useEffect } from 'react';
 
-const Banner = ({ defaultBanner =  'banner'}) => {
-  const [state, setState] = useState('')
-  const [bannerState, setBannerState] = useState(defaultBanner)
+const Banner = ({ state }) => {
+  const [bannerState, setBannerState] = useState('banner')
 
-  useEffect(() => {
-    setBannerState(defaultBanner)
-    if (state === 'active') {
-      setBannerState(`${defaultBanner} ${state}`)
-    } 
-  }, [state, defaultBanner])
-
-  console.log(`[BannerState]: ${bannerState}`)
+    useEffect(() => {
+     
+      if (state === 'active') {
+        setBannerState(`banner ${state}`)
+      } else {
+        setBannerState(`banner`)
+      }
+      
+    }, [state])
+  
+  console.log(`[Banner] props:  ${JSON.stringify(bannerState, null, 2)}`)
+  
   return (
     <>
-      <MainMenu state={state} />
       <section className={bannerState}>
-        <Header setState={setState} />
         <video className='video' src={video} type='video/mp4' muted loop autoPlay ></video>
         <div className='overlay'></div>
         <div className='text'>

@@ -15,8 +15,8 @@ const Toggle = ( {setState} ) => {
          setState('')
       }
    }
-   
-   
+  
+ 
    return (
       <div className={toggleState} onClick={handleToggle} ></div>
    )

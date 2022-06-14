@@ -16,15 +16,3 @@
    background-position: center;
    cursor: pointer;
 }
-
-/* .Toggle {
-   @apply relative;
-   @apply w-16;
-   @apply h-16;
-   background: url("../../assets/img/menu.png");
-   @apply bg-no-repeat;
-   background-size: 30px;
-   @apply bg-center;
-   @apply cursor-pointer;
-
-} */
